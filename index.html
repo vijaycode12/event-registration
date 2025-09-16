@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <span>Events</span>
+            </div>
+            <div class="navdata">
+                <ul>
+                    <li><a href="#container">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="container">
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="images/events.mp4" type="video/mp4">
+                </video>
+                <div class="overlay-content">
+                    <h1>Welcome to <span>Events</span></h1>
+                    <p>Find your best Event Organizers across Globe.</p>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="head1">
+                <span>About</span>
+            </div>
+            <div class="s2data">
+                <div class="left">
+                    <p>At <span>Events</span>, we believe every event is more than just a gathering — it’s an
+                        experience, a
+                        memory, and a story waiting to be told.
+                        <br>
+                        <br>
+                        We are a professional event organising and mediator company that bridges the gap between clients
+                        and
+                        trusted vendors. Whether it’s a wedding, corporate function, birthday celebration, cultural
+                        fest, or
+                        large-scale public event, we handle everything with precision, creativity, and care.
+                    </p>
+                </div>
+                <div class="right">
+                    <img src="images/image.png">
+                </div>
+            </div>
+        </div>
+        <div id="events">
+            <div class="head2">
+                <span>Events</span>
+            </div>
+            <div class="s3data">
+                <div class="card">
+                    <div class="img">
+                        <img src="images/bday.jpg">
+                    </div>
+                    <div class="carddata">
+                        <h1>Birthday Events</h1>
+                        <p style="font-family: 'Courier New', Courier, monospace;">"Celebrate life’s special day with
+                            joy, style, and unforgettable vibes."</p>
+                    </div>
+                    <div class="but">
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/corp.jpg">
+                    </div>
+                    <div class="carddata">
+                        <h1>corporate Events</h1>
+                        <p style="font-family: 'Courier New', Courier, monospace;">"Professional, seamless, and
+                            impactful corporate events that leave a mark."</p>
+                    </div>
+                    <div class="but">
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/marriage.jpg">
+                    </div>
+                    <div class="carddata">
+                        <h1>marriage Events</h1>
+                        <p style="font-family: 'Courier New', Courier, monospace;">"Crafting weddings that blend
+                            elegance, emotion, and everlasting memories."</p>
+                    </div>
+                    <div class="but">
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/concert.jpg">
+                    </div>
+                    <div class="carddata">
+                        <h1>concert Events</h1>
+                        <p style="font-family: 'Courier New', Courier, monospace;">"Bringing music to life with
+                            electrifying concert experiences."</p>
+                    </div>
+                    <div class="but">
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="head3">
+                <span>Contact</span>
+            </div>
+            <div class="tab">
+                <div class="form">
+                    <div class="l">
+                        <label for="fname"> First Name </label>
+                        <input type="text" id="fame" name="fname" placeholder="First Name" autocomplete="off" required>
+                    </div>
+                    <div class="l">
+                        <label for="lname"> Last Name </label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="off" required>
+                    </div>
+                    <div class="l">
+                        <label for="Email"> Email </label>
+                        <input type="email" id="Email" name="Email" placeholder="Email" autocomplete="off" required>
+                    </div>
+                    <div class="l">
+                        <label for="ph">Contact</label>
+                        <input type="tel" id="ph" name="contact" placeholder="contact" autocomplete="off" required>
+                    </div>
+                    <div class="l">
+                        <label for="Event">Type of Event</label>
+                        <select id="drop" name="event">
+                            <option value="birthday">Birthday</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="marriage">Marriage</option>
+                            <option value="concert">Concert</option>
+                        </select>
+                    </div>
+                    <div class="l">
+                        <label for="query">Query</label>
+                        <textarea id="query " name="query" placeholder="Enter your Query" required></textarea>
+                    </div>
+                    <div id="fbut">
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="contact-info">
+          <p>Contact: +91 987-43-210</p>
+          <p>Email:info@eventscompany.com</p>
+        </div>
+    
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    
+        <div class="copyright">
+          &copy; 2025 Events. All Rights Reserved.
+        </div>
+      </footer>
+    
+</body>
+
+</html>
