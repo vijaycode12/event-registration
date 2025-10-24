@@ -21,6 +21,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li id="login-li"><a href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -67,15 +68,15 @@
             <div class="s3data">
                 <div class="card">
                     <div class="img">
-                        <img src="images/bday.jpg">
+                        <img src="images/private.jpg">
                     </div>
                     <div class="carddata">
-                        <h1>Birthday Events</h1>
+                        <h1>Private Events</h1>
                         <p style="font-family: 'Courier New', Courier, monospace;">"Celebrate life’s special day with
                             joy, style, and unforgettable vibes."</p>
                     </div>
                     <div class="but">
-                        <button>Book Now</button>
+                        <button onclick="window.location.href='events.html?type=private'">Book Now</button>
                     </div>
                 </div>
                 <div class="card">
@@ -88,7 +89,7 @@
                             impactful corporate events that leave a mark."</p>
                     </div>
                     <div class="but">
-                        <button>Book Now</button>
+                        <button onclick="window.location.href='events.html?type=corporate'">Book Now</button>
                     </div>
                 </div>
                 <div class="card">
@@ -101,7 +102,7 @@
                             elegance, emotion, and everlasting memories."</p>
                     </div>
                     <div class="but">
-                        <button>Book Now</button>
+                        <button onclick="window.location.href='events.html?type=marriage'">Book Now</button>
                     </div>
                 </div>
                 <div class="card">
@@ -114,50 +115,69 @@
                             electrifying concert experiences."</p>
                     </div>
                     <div class="but">
-                        <button>Book Now</button>
+                        <button onclick="window.location.href='events.html?type=concert'">Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
         <div id="contact">
             <div class="head3">
-                <span>Contact</span>
+                <span id="cont-name">Contact</span>
             </div>
             <div class="tab">
+                <form novalidate>
                 <div class="form">
                     <div class="l">
                         <label for="fname"> First Name </label>
-                        <input type="text" id="fame" name="fname" placeholder="First Name" autocomplete="off" required>
+                        <div class="input-block">
+                        <input type="text" id="fname" name="fname" placeholder="First Name" autocomplete="off" required>
+                        <span class="errors" id="error-fname"></span>
+                        </div>
                     </div>
                     <div class="l">
                         <label for="lname"> Last Name </label>
+                        <div class="input-block">
                         <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="off" required>
+                        <span class="errors" id="error-lname"></span>
+                    </div>
                     </div>
                     <div class="l">
                         <label for="Email"> Email </label>
+                        <div class="input-block">
                         <input type="email" id="Email" name="Email" placeholder="Email" autocomplete="off" required>
+                        <span class="errors" id="error-email"></span>
+                    </div>
                     </div>
                     <div class="l">
                         <label for="ph">Contact</label>
+                        <div class="input-block">
                         <input type="tel" id="ph" name="contact" placeholder="contact" autocomplete="off" required>
+                        <span class="errors" id="error-phone"></span>
+                    </div>
                     </div>
                     <div class="l">
                         <label for="Event">Type of Event</label>
                         <select id="drop" name="event">
-                            <option value="birthday">Birthday</option>
+                            <option value="birthday">Private</option>
                             <option value="corporate">Corporate</option>
                             <option value="marriage">Marriage</option>
                             <option value="concert">Concert</option>
                         </select>
+                        <span class="errors" id="error-event"></span>
                     </div>
                     <div class="l">
                         <label for="query">Query</label>
-                        <textarea id="query " name="query" placeholder="Enter your Query" required></textarea>
+                        <div class="input-block">
+                        <textarea id="query" name="query" placeholder="Enter your Query" required></textarea>
+                        <span class="errors" id="error-query"></span>
+                    </div>
                     </div>
                     <div id="fbut">
-                        <button>Book Now</button>
+                        <button type="submit">Submit</button>
                     </div>
+                    <div class="status-message"></div>
                 </div>
+                </form>
             </div>
         </div>
     </main>
@@ -179,7 +199,7 @@
           &copy; 2025 Events. All Rights Reserved.
         </div>
       </footer>
-    
+    <script src="script.js"></script>
 </body>
 
 </html>

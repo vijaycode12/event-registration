@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <form novalidate>
+    <div class="status-message"></div>
+     <div class="signup-container">
+      <h2>Signup</h2>
+      <div class="username">
+        <label for="name">Username</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter username"
+          required
+        />
+        <span class="errors" id="error-name"></span>
+      </div>
+      <div class="user-email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <span class="errors" id="error-email"></span>
+      </div>
+     <div class="user-password">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        <span class="errors" id="error-pass"></span>
+      </div>
+      <div class="re-pass">
+        <label for="re-password">Re-enter Password</label>
+        <input type="password" id="re-password" name="re-password" placeholder="Re-Enter your password" required />
+        <span class="errors" id="error-repass"></span>
+      </div>
+      <div class="signup-btn">
+        <button type="submit"  id="sign-btn">Sign up</button>
+      </div>
+      <hr/>
+      <span class="acc-login"
+        >Already have an account?<a href="login.html">Log in</a>.</span
+      >
+    </div>
+    </form>
+    <script src="signup.js"></script>
+</body>
+</html>

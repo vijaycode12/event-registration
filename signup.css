@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container{
+    background-color:#1e1e1e;
+    width:400px;
+    padding: 20px 30px;
+    height: 79vh;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.signup-container h2{
+    text-align: center;
+    font-size: 24px;
+     margin-bottom: 36px;
+    font-weight: bolder;
+}
+
+.signup-container label{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.signup-container input{
+    margin-top: 2px;
+    width: 100%;
+    padding: 7px 5px;
+    border-radius: 4px;
+    border: 1px solid #444;
+}
+
+.signup-container div{
+    margin-top: 18px;
+}
+
+.signup-btn{
+    text-align: center;
+    
+}
+
+#sign-btn{
+    padding: 12px 22px;
+    font-size: 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+hr{
+    margin: 42px 0px;
+    border: 0;
+    height: 1px;
+    width: 350px;
+    background-color:#555;
+}
+
+.acc-login{
+    display: block;
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+.acc-login a{
+    color: #0066c0;
+    text-decoration: none;
+    margin-left: 4px;
+    margin-right: 2px;
+}
+
+.acc-login a:hover{
+    text-decoration: underline;
+}
+
+.errors{
+    margin-top: 5px;
+    font-size:13px;
+    color: #ef2525;
+    visibility: hidden;
+    height: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+i{
+    font-size: 13px;
+    margin-right: 4px;
+}
+
+.errors.visible{
+    visibility: visible;
+}
+
+.status-message{
+    font-size: 16px;
+    max-height: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+.status-message.success{
+    color: green;
+    visibility: visible;
+}
+
+.status-message.fail{
+    color: #ef2525;
+    visibility: visible;
+}
+
+.input-error{
+    border: 2px solid #ef2525 !important;
+}
+
+.input-normal{
+    border: 2px solid #000 !important;
+}

@@ -1,0 +1,118 @@
+body {
+  background: #181818;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+#registration-main {
+  max-width: 500px;
+  width: 100%;
+  background: #232323;
+  border-radius: 15px;
+  padding: 30px 38px 40px 38px;
+  box-shadow: 0 8px 40px #000c;
+}
+
+h1 {
+  margin-bottom: 45px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  font-size:28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 30px;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #bbcaff;
+}
+
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #383838;
+  color: #efefef;
+  outline: none;
+  margin-top: 6px;
+}
+
+input[readonly] {
+  background: #2a2a2a;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+#reg-email[readonly] {
+  background: #242428;
+  color: #ccc;
+  border: 1px solid #555;
+  cursor: not-allowed;
+}
+
+
+#reg-status {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #f02c2c;
+  min-height: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reg-status[style*="green"] {
+  color: #2bde43;
+}
+
+hr{
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 10px;
+    border-color: #858585;
+}
+#reg-submit-btn {
+  cursor: pointer;
+  width: 40%;
+  margin-left: 150px;
+  padding: 12px 0px;
+  border-radius: 14px;
+  border: none;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  color: #232323;
+  box-shadow: 0 4px 16px #23232336;
+  transition: all 0.2s ease;
+}
+
+#reg-submit-btn:hover {
+  background: #fff;
+  color: #24d386;
+}

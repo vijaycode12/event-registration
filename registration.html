@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register for Event</title>
+    <link rel="stylesheet" href="registration.css" />
+  </head>
+  <body>
+    <main id="registration-main">
+      <h1>Registration Form</h1>
+      <form id="registration-form">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label>
+            Name:<br />
+            <input id="reg-name" name="name" type="text" required />
+          </label>
+          <label>
+            Email:<br />
+            <input id="reg-email" name="email" type="email" readonly />
+          </label>
+          <label>
+            Phone Number:<br />
+            <input
+              id="reg-phone"
+              name="phone"
+              type="tel"
+              placeholder="Enter phone number"
+              required
+            />
+          </label>
+        </fieldset>
+        <hr>
+        <fieldset>
+          <legend>Event Details</legend>
+          <label>
+            Event Name:<br />
+            <input id="reg-event-name" type="text" readonly />
+          </label>
+          <label>
+            Date:<br />
+            <input id="reg-event-date" type="text" readonly />
+          </label>
+          <label>
+            Time:<br />
+            <input id="reg-event-time" type="text" readonly />
+          </label>
+          <label>
+            Location:<br />
+            <input id="reg-event-location" type="text" readonly />
+          </label>
+        </fieldset>
+        <button type="submit" id="reg-submit-btn">Register</button>
+        <p id="reg-status"></p>
+      </form>
+    </main>
+    <script src="registration.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Details</title>
+  <link rel="stylesheet" href="eventDetails.css" />
+</head>
+<body>
+  <div class="event-details-container">
+    <div class="event-details-card" id="event-details-card">
+      <div id="loading" class="loading">Loading...</div>
+      <div id="event-details-box" class="event-details-box" style="display: none;">
+        <div class="event-img-stretch">
+          <img id="event-img" src="#" alt="Event image" />
+        </div>
+        <div style="margin-top:18px;">
+          <span class="event-type-pill" id="event-type"></span>
+        </div>
+        <div class="event-content">
+          <h2 id="event-name" class="event-title"></h2>
+          <div class="event-meta-row">
+            <span class="label">Time:</span><span id="event-time"></span>
+          </div>
+          <div class="event-meta-row">
+            <span class="label">Location:</span><span id="event-location"></span>
+          </div>
+          <div class="event-meta-row detail-row">
+            <span class="label">Detail:</span>
+            <span id="event-desc"></span>
+          </div>
+        </div>
+        <button id="register-btn" class="register-btn">Register</button>
+        <div id="register-status" class="register-status"></div>
+      </div>
+    </div>
+  </div>
+  <script src="eventDetails.js"></script>
+</body>
+</html>
