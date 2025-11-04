@@ -15,11 +15,13 @@ function prettyEventType(type) {
   return mapping[type.toLowerCase()] || `${type.charAt(0).toUpperCase()}${type.slice(1)} Events`;
 }
 
+const backendUrl = window.BACKEND_URL;
+
 document.addEventListener("DOMContentLoaded", () => {
   const eventType = getQueryParam("type") || "all";
   document.getElementById("event-type-title").textContent = prettyEventType(eventType);
 
-  fetch(`http://localhost:5000/api/v1/event?type=${eventType}`)
+  fetch(`${backendUrl}/api/v1/event?type=${eventType}`)
     .then((res) => res.json())
     .then(({ data }) => {
       const container = document.getElementById("events-list");

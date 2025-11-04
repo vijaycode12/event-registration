@@ -113,9 +113,12 @@ document.querySelector('form').addEventListener('submit',async function (e) {
 
     const Message = document.querySelector('.status-message');
 
+    const backendUrl = window.BACKEND_URL;
+
+
   //CONNECTING TO THE BACKEND
     try{
-        const response = await fetch('http://localhost:5000/api/v1/auth/sign-up',{
+        const response = await fetch(`${backendUrl}/api/v1/auth/sign-up`,{
             method:'POST',
             credentials:'include',
             headers:{'Content-Type':'application/json'},

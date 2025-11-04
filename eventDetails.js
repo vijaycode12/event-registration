@@ -2,6 +2,8 @@ function getQueryParam(param) {
   return new URL(window.location.href).searchParams.get(param);
 }
 
+const backendUrl = window.BACKEND_URL;
+
 document.addEventListener("DOMContentLoaded", async () => {
   const eventId = getQueryParam("id");
   const loadingDiv = document.getElementById("loading");
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let res;
   try {
-    res = await fetch(`http://localhost:5000/api/v1/event/${eventId}`);
+    res = await fetch(`${backendUrl}/api/v1/event/${eventId}`);
   } catch {
     loadingDiv.innerText = "Failed to contact server.";
     return;

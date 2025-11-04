@@ -77,10 +77,13 @@ window.addEventListener('DOMContentLoaded',()=>{
 
     const Message = document.querySelector('.status-message');
 
+    const backendUrl = window.BACKEND_URL;
+
+
     //CONNECTING TO BACKEND
 
     try{
-        const response = await fetch('http://localhost:5000/api/v1/auth/log-in',{
+        const response = await fetch(`${backendUrl}/api/v1/auth/log-in`,{
             method:'POST',
             credentials: 'include',
             headers:{'Content-Type':'application/json'},

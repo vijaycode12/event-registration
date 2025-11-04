@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const statusEl = document.getElementById("reg-status");
   const submitBtn = document.getElementById("reg-submit-btn");
 
+  const backendUrl = window.BACKEND_URL;
+
   try {
-    const userRes = await fetch("http://localhost:5000/api/v1/auth/me", { credentials: "include" });
+    const userRes = await fetch(`${backendUrl}/api/v1/auth/me`, { credentials: "include" });
     const userData = await userRes.json();
     if (userData.success) {
       nameInput.value = userData.user.username || "";
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const eventRes = await fetch(`http://localhost:5000/api/v1/event/${eventId}`);
+    const eventRes = await fetch(`${backendUrl}/api/v1/event/${eventId}`);
     const eventJson = await eventRes.json();
     const event = eventJson.data;
     if (event) {
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/v1/register/${eventId}`, {
+      const res = await fetch(`${backendUrl}/api/v1/register/${eventId}`, {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

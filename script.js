@@ -111,6 +111,9 @@ document.getElementById('query').addEventListener('input',validateQuery);
     document.getElementById(id).classList.add('input-normal')
 );
 
+const backendUrl = window.BACKEND_URL;
+
+
 window.addEventListener('DOMContentLoaded',async()=>{
     document.querySelector('form').addEventListener('submit',async function(e) {
         
@@ -140,7 +143,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
 
         //CONNECTING TO BACKEND
         try{
-            const response = await fetch('http://localhost:5000/api/v1/contact',{
+            const response = await fetch(`${backendUrl}/api/v1/contact`,{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({firstName,lastName,email,phone,eventType,query}),
@@ -209,7 +212,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
 
     let isLoggedIn = false;
     try{
-        const res = await fetch('http://localhost:5000/api/v1/auth/me',{credentials:"include"});
+        const res = await fetch(`${backendUrl}/api/v1/auth/me`,{credentials:"include"});
         
         const data = await res.json();
 
