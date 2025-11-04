@@ -241,7 +241,7 @@ window.addEventListener('DOMContentLoaded',async()=>{
             };
 
             document.getElementById('signout-btn').onclick = async () => {
-                await fetch("http://localhost:5000/api/v1/auth/sign-out", { method: "POST", credentials: "include" });
+                await fetch(`${backendUrl}/api/v1/auth/sign-out`, { method: "POST", credentials: "include" });
                 location.reload();
             };
             document.addEventListener('click', (event) => {
